@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ButtonNavbar from "./ButtonNavbar";
+import { useLocation} from 'react-router-dom';
 const Navbar = () => {
+    const {pathname} = useLocation();
     const [url, setUrl] = useState("/");
     const listMenu = [
         {
@@ -95,7 +97,7 @@ const Navbar = () => {
     ];
     return (
         <>
-            <h1>{url}</h1>
+            <h1>{pathname}</h1>
             <ul
                 style={{
                     display: "flex",
