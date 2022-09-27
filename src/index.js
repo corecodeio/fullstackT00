@@ -5,11 +5,15 @@ import App from './App';
 //import FormularioFormik from './components/FormularioFormik';
 //import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
-
+import { DataProvaider } from './context/DataContext';
+import { UserProvider } from './context/UserContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App/>
-        
+    <UserProvider>
+        <DataProvaider>
+            <App />
+        </DataProvaider>
+    </UserProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
