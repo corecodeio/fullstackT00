@@ -6,4 +6,4 @@ const Button = ({tipo, accion}) => {
   )
 }
 
-export default Button
+export default Button;
