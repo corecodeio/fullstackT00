@@ -7,11 +7,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DataProvaider } from './context/DataContext';
 import { UserProvider } from './context/UserContext';
+import { store } from './store/store';
+import { Provider } from 'react-redux';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <UserProvider>
         <DataProvaider>
-            <App />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </DataProvaider>
     </UserProvider>
 );
